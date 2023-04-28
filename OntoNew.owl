@@ -396,7 +396,16 @@
         <ObjectProperty IRI="#Wears"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="http://schema.org/givenName"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="http://schema.org/ratingValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#CostumeItems"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#PerformanceCharges"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Band1"/>
@@ -1302,9 +1311,44 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#AreDesignedBy"/>
+        <NamedIndividual IRI="#Costume2"/>
+        <NamedIndividual IRI="#Designer1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#AreDesignedBy"/>
         <NamedIndividual IRI="#Designer1"/>
         <NamedIndividual IRI="#Designer1"/>
     </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://schema.org/givenName"/>
+        <NamedIndividual IRI="#Band1"/>
+        <Literal xml:lang="en">Uk Sahara&apos;s</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CostumeItems"/>
+        <NamedIndividual IRI="#Costume1"/>
+        <Literal xml:lang="en">Lehnga,Sharara,Gharara,Maxi</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CostumeItems"/>
+        <NamedIndividual IRI="#Costume2"/>
+        <Literal xml:lang="en">PantCoat,Kurta,Sherwani</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://schema.org/givenName"/>
+        <NamedIndividual IRI="#Performance1"/>
+        <Literal xml:lang="en">Fire Show</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://schema.org/givenName"/>
+        <NamedIndividual IRI="#Performance2"/>
+        <Literal xml:lang="en">Gymnastics</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#PerformanceCharges"/>
+        <NamedIndividual IRI="#Performance2"/>
+        <Literal xml:lang="en">1Million</Literal>
+    </DataPropertyAssertion>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#Adopted"/>
         <Class IRI="#WeddingPlanner"/>
@@ -1826,12 +1870,44 @@
         <Class IRI="http://schema.org/AggregateRating"/>
     </ObjectPropertyRange>
     <DataPropertyDomain>
+        <DataProperty IRI="http://schema.org/givenName"/>
+        <Class IRI="http://schema.org/Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://schema.org/givenName"/>
+        <Class IRI="#Performances"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="http://schema.org/ratingValue"/>
         <Class IRI="http://schema.org/AggregateRating"/>
     </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#CostumeItems"/>
+        <Class IRI="#DressBride"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#CostumeItems"/>
+        <Class IRI="#DressGroom"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#PerformanceCharges"/>
+        <Class IRI="#Performances"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="http://schema.org/givenName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="http://schema.org/ratingValue"/>
         <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#CostumeItems"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#PerformanceCharges"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
